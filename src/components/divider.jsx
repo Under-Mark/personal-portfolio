@@ -22,7 +22,7 @@ export default function NameDivider() {
   }, [items.length]);
   
   return (
-    <div className="w-full bg-blue-950 border-y-2 border-orange-500 py-6 px-8 overflow-hidden my-9">
+    <div className="w-full bg-blue-950 border-y-2 border-orange-500 py-6 px-8 overflow-hidden my-6">
       <div className="max-w-6xl mx-auto flex items-center justify-center space-x-8 ">
         
         {/* Decorative line */}
