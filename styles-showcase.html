@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Styles Showcase</title>
+    <!-- Link to the compiled CSS output -->
+    <link rel="stylesheet" href="/src/index.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-neutral-50 text-deep-900 font-body p-10 space-y-10">
+
+    <!-- Headings -->
+    <section>
+      <h1 class="font-heading text-5xl font-bold">Heading 1 (Poppins)</h1>
+      <h2 class="font-heading text-4xl font-semibold">Heading 2 (Poppins)</h2>
+      <h3 class="font-heading text-3xl font-medium">Heading 3 (Poppins)</h3>
+    </section>
+
+    <!-- Body Text -->
+    <section>
+      <p class="text-lg">
+        This is body text using <span class="font-body">Roboto</span>.
+      </p>
+      <p class="text-gray-700 mt-2">
+        Secondary body text with lighter gray tone.
+      </p>
+    </section>
+
+    <!-- Colors -->
+    <section class="space-y-4">
+      <div class="flex items-center space-x-4">
+        <div class="w-16 h-16 bg-deep-900"></div>
+        <span>Deep 900 (#222222)</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <div class="w-16 h-16 bg-orange-500"></div>
+        <span>Orange 500 (#f97316)</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <div class="w-16 h-16 bg-orange-600"></div>
+        <span>Orange 600 (#ea580c)</span>
+      </div>
+      <div class="flex items-center space-x-4 border p-2">
+        <div class="w-16 h-16 bg-neutral-50 border"></div>
+        <span>Neutral 50 (#ffffff)</span>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="space-x-4">
+      <button class="bg-orange-500 text-neutral-50 px-6 py-3 rounded-md font-heading font-semibold hover:bg-orange-600 transition">
+        Primary Button
+      </button>
+      <button class="bg-deep-900 text-neutral-50 px-6 py-3 rounded-md font-heading hover:bg-gray-800 transition">
+        Secondary Button
+      </button>
+    </section>
+
+  </body>
+</html>
