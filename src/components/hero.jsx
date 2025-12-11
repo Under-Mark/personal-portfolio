@@ -41,7 +41,7 @@ export default function Hero() {
         <div className="flex justify-center animate-fadeInUp delay-200">
           <div className="bg-blue-50 p-4 rounded-lg shadow-xl">
             <img
-              src="mark-img.png"
+              src="nibba.png"
               alt="Mark's portrait"
               className="w-80 h-auto object-cover rounded-lg transform hover:scale-105 transition"
             />

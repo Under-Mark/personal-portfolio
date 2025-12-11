@@ -4,17 +4,26 @@ import Divider from "./components/divider"
 import About from "./components/about"
 import Projects from "./components/projects"
 import Experience from "./components/experience"
+import Accomplishments from "./components/accomplishments"
+import Contact from "./components/contact"
+import Footer from "./components/footer"
+
 function App() {
   return (
     <>
         <NavBar/>
         <Hero/> 
-        <Divider/>
+        <Divider section="About Me"/>
         <About/>
-        <Divider/>
+          <Divider section="My Experience"/>
+         <Experience/>
+          <Divider section="My Projects"/>
         <Projects/>
-        <Divider/>
-        <Experience/>
+          <Divider section="My Accomplishments"/>
+        <Accomplishments />
+          <Divider section="My Contacts"/>
+        <Contact/>
+        <Footer/>
   </>
   )
 }

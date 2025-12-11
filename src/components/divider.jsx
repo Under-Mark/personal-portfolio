@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-export default function NameDivider() {
+export default function NameDivider(props) {
   const items = [
-    'Mark Christopher B. Sarmiento',
+    props.section,
     'Virtual Assistant'
   ];
   
@@ -22,14 +22,14 @@ export default function NameDivider() {
   }, [items.length]);
   
   return (
-    <div className="w-full bg-blue-950 border-y-2 border-orange-500 py-6 px-8 overflow-hidden my-6">
-      <div className="max-w-6xl mx-auto flex items-center justify-center space-x-8 ">
+    <div className="w-full px-8 py-6 overflow-hidden border-orange-500 bg-blue-950 border-y-2">
+      <div className="flex items-center justify-center max-w-6xl mx-auto space-x-8 ">
         
         {/* Decorative line */}
-        <div className="hidden md:block flex-1 h-px bg-gradient-to-r from-transparent via-orange-500 to-orange-500"></div>
+        <div className="flex-1 hidden h-px md:block bg-gradient-to-r from-transparent via-orange-500 to-orange-500"></div>
         
         {/* Star decoration */}
-        <div className="text-orange-500 text-2xl">✦</div>
+        <div className="text-2xl text-orange-500">✦</div>
         
         {/* Animated Text */}
         <div className="min-w-[300px] md:min-w-[450px] text-center">
@@ -45,10 +45,10 @@ export default function NameDivider() {
         </div>
         
        
-        <div className="text-orange-500 text-2xl">✦</div>
+        <div className="text-2xl text-orange-500">✦</div>
         
    
-        <div className="hidden md:block flex-1 h-px bg-gradient-to-l from-transparent via-orange-500 to-orange-500"></div>
+        <div className="flex-1 hidden h-px md:block bg-gradient-to-l from-transparent via-orange-500 to-orange-500"></div>
       </div>
     </div>
   );
