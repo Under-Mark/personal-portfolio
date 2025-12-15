@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-
 export default function NameDivider(props) {
   const items = [
-    props.section,
-    'Virtual Assistant'
+    'Software Developer',
+    'Virtual Assistant',
+    'Customer Support',
+    'Graphic Design'
   ];
   
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,9 +35,7 @@ export default function NameDivider(props) {
         {/* Animated Text */}
         <div className="min-w-[300px] md:min-w-[450px] text-center">
           <span 
-            className={`font-heading text-2xl md:text-3xl font-bold ${
-              currentIndex === 0 ? 'text-white' : 'text-orange-400'
-            } tracking-wide inline-block transition-all duration-500 ${
+            className={`font-heading text-2xl md:text-3xl font-bold text-orange-500 tracking-wide inline-block transition-all duration-500 ${
               isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
             }`}
           >

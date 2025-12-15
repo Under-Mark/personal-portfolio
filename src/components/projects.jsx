@@ -50,7 +50,7 @@ export default function Projects() {
       title: "Hotel Booking Tracker",
       description: "Excel Based Tracker used to track guest bookings while acting as a sales tracker while providing descriptive monthly summary.",
       fullDescription: "Hotel Booking Tracker is a streamlined sales and booking management system designed to help hospitality businesses monitor reservations, calculate revenues, and maintain accurate records of guest stays. Built in MS Excel, it combines structured data entry with automated formulas to reduce errors and improve efficiency.",
-      videoUrl: "/https://youtu.be/dckgzpphbx4",
+      videoUrl: "https://youtu.be/dckgzpphbx4",
       thumbnail: "/hotel-book-tracker-thumbnail.png",
       tags: ["Microsoft Excel",]
     },
@@ -241,11 +241,11 @@ export default function Projects() {
           
             <div className="p-6 space-y-6">
              
-              {selectedProject.id ? (
-                
+              {selectedProject.videoUrl ? (
+                // Video Player for Technical Projects
                 <div className="overflow-hidden bg-gray-100 rounded-xl aspect-video">
                   {selectedProject.videoUrl.includes('youtube.com') || selectedProject.videoUrl.includes('youtu.be') ? (
-                    
+                    // YouTube embed
                     <iframe
                       className="w-full h-full"
                       src={getYouTubeEmbedUrl(selectedProject.videoUrl)}
@@ -255,7 +255,7 @@ export default function Projects() {
                       allowFullScreen
                     ></iframe>
                   ) : (
-                  
+                    // Regular video
                     <video
                       controls
                       poster={selectedProject.thumbnail}

@@ -7,7 +7,7 @@ import Experience from "./components/experience"
 import Accomplishments from "./components/accomplishments"
 import Contact from "./components/contact"
 import Footer from "./components/footer"
-
+import Services from "./components/services"
 function App() {
   return (
     <>
@@ -15,6 +15,8 @@ function App() {
         <Hero/> 
         <Divider section="About Me"/>
         <About/>
+        <Divider section="My Services"/>
+        <Services/>
           <Divider section="My Experience"/>
          <Experience/>
           <Divider section="My Projects"/>

@@ -2,48 +2,56 @@ import { FaDownload, FaBriefcase } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-white flex items-center justify-center px-8 py-16">
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section className="flex items-center justify-center min-h-screen px-8 py-16 bg-white">
+      <div className="grid items-center w-full max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
         
         {/* Left: Intro */}
         <div className="space-y-6 animate-fadeInUp">
           {/* Greeting */}
-          <h2 className="font-heading text-3xl text-blue-950 font-semibold">
+          <h2 className="text-3xl font-semibold font-heading text-blue-950">
             Hello there,
           </h2>
 
           {/* Opening Statement with Name Highlighted */}
-          <h1 className="font-heading text-6xl font-bold text-blue-950 leading-tight">
-            I’m <span className="underline text-orange-500">Mark Christopher B. Sarmiento</span>
+          <h1 className="text-6xl font-bold leading-tight font-heading text-blue-950">
+            I’m <span className="text-orange-500 underline">Mark Christopher B. Sarmiento</span>
           </h1>
-          <div className="w-24 h-1 bg-orange-500 mt-2"></div>
+          <div className="w-24 h-1 mt-2 bg-orange-500"></div>
 
-          <p className="font-body text-lg text-gray-700 max-w-md">
+          <p className="max-w-md text-lg text-gray-700 font-body">
             Your future Virtual Assistant — I build scalable systems and creative solutions.
           </p>
 
           {/* Buttons with Icons */}
           <div className="flex space-x-4">
+            {/* Resume Download */}
             <a
               href="/mcs-resume.pdf"
               download
-              className="flex items-center space-x-2 bg-blue-950 text-white px-6 py-3 rounded-md font-heading font-semibold hover:bg-blue-900 transition"
+              className="flex items-center px-6 py-3 space-x-2 font-semibold text-white transition rounded-md bg-blue-950 font-heading hover:bg-blue-900"
             >
               <FaDownload /> <span>Download Resume</span>
             </a>
-            <button className="flex items-center space-x-2 bg-orange-500 text-white px-6 py-3 rounded-md font-heading font-semibold hover:bg-orange-600 transition shadow-md">
+
+            {/* Hire Me via WhatsApp */}
+            <a
+              href="https://wa.me/639750859003?text=Hi%20Mark,%20I%20would%20like%20to%20hire%20you!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center px-6 py-3 space-x-2 font-semibold text-white transition bg-orange-500 rounded-md shadow-md font-heading hover:bg-orange-600"
+            >
               <FaBriefcase /> <span>Hire Me</span>
-            </button>
+            </a>
           </div>
         </div>
 
         {/* Right: Photo with Background */}
-        <div className="flex justify-center animate-fadeInUp delay-200">
-          <div className="bg-blue-50 p-4 rounded-lg shadow-xl">
+        <div className="flex justify-center delay-200 animate-fadeInUp">
+          <div className="p-4 rounded-lg shadow-xl bg-blue-50">
             <img
               src="nibba.png"
               alt="Mark's portrait"
-              className="w-80 h-auto object-cover rounded-lg transform hover:scale-105 transition"
+              className="object-cover h-auto transition transform rounded-lg w-80 hover:scale-105"
             />
           </div>
         </div>

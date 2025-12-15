@@ -6,9 +6,10 @@ import {
   FaLinkedin, 
   FaGithub, 
   FaFacebook, 
-  FaPaperPlane 
+  FaPaperPlane,
+  FaWhatsapp // ✅ Added WhatsApp icon
 } from "react-icons/fa";
-import emailjs from "@emailjs/browser"; // ✅ use the modern EmailJS SDK
+import emailjs from "@emailjs/browser"; // ✅ modern EmailJS SDK
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -63,8 +64,8 @@ export default function Contact() {
     {
       icon: <FaPhone className="text-xl" />,
       title: "Phone",
-      value: "+63 123 456 7890",
-      link: "tel:+63123456789"
+      value: "+63 975 085 9003",
+      link: "https://wa.me/639750859003?text=Hi%20Mark,%20I%20would%20like%20to%20hire%20you!"
     },
     {
       icon: <FaMapMarkerAlt className="text-xl" />,
@@ -103,7 +104,7 @@ export default function Contact() {
           </h2>
           <div className="w-20 h-1 mx-auto bg-orange-500"></div>
           <p className="text-lg text-gray-700 font-body">
-            Let's discuss how I can help with your project
+            Let's discuss how I can help your business
           </p>
         </div>
 
@@ -162,13 +163,26 @@ export default function Contact() {
                   ))}
                 </div>
               </div>
+
+              {/* WhatsApp Button */}
+              <div className="pt-6">
+                <a
+                  href="https://wa.me/639750859003?text=Hi%20Mark,%20I%20would%20like%20to%20hire%20you!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-full px-6 py-3 space-x-2 font-semibold text-white transition-colors bg-green-500 rounded-lg font-heading hover:bg-green-600"
+                >
+                  <FaWhatsapp className="text-xl" /> {/* ✅ WhatsApp logo */}
+                  <span>Contact Me on WhatsApp</span>
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="p-8 bg-white border-2 border-gray-200 rounded-lg">
-            <h3 className="mb-6 text-2xl font-bold font-heading text-blue-950">
-              Send a Message
+            <h3 className="mb-6 text-2xl font-bold text-center font-heading text-blue-950">
+              Send Email
             </h3>
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Name */}
