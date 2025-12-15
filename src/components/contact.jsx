@@ -1,5 +1,14 @@
 import { useState } from "react";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaFacebook, FaPaperPlane } from "react-icons/fa";
+import { 
+  FaEnvelope, 
+  FaPhone, 
+  FaMapMarkerAlt, 
+  FaLinkedin, 
+  FaGithub, 
+  FaFacebook, 
+  FaPaperPlane 
+} from "react-icons/fa";
+import emailjs from "@emailjs/browser"; // ✅ use the modern EmailJS SDK
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -9,6 +18,8 @@ export default function Contact() {
     message: ""
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -16,11 +27,30 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = () => {
-    // Handle form submission here (e.g., send to email service)
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I'll get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.send(
+      "service_gyvx1tv",       // ✅ Your Service ID
+      "template_ew57hn7",      // ✅ Your Template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      },
+      "I_iGPLapYQlTVZ9RA"      // ✅ Your Public Key
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    })
+    .catch((err) => {
+      console.error("FAILED...", err);
+      alert("Oops! Something went wrong. Please try again.");
+    })
+    .finally(() => setLoading(false));
   };
 
   const contactInfo = [
@@ -58,7 +88,7 @@ export default function Contact() {
     {
       icon: <FaFacebook className="text-xl" />,
       name: "Facebook",
-      link: "https://facebook.com/yourprofile"
+      link: "https://www.facebook.com/markchristopher.sarmiento.1/"
     }
   ];
 
@@ -140,7 +170,7 @@ export default function Contact() {
             <h3 className="mb-6 text-2xl font-bold font-heading text-blue-950">
               Send a Message
             </h3>
-            <div className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
               {/* Name */}
               <div>
                 <label className="block mb-2 text-sm font-semibold text-gray-700 font-body">
@@ -153,6 +183,7 @@ export default function Contact() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 transition-colors border-2 border-gray-200 rounded-lg focus:border-orange-500 focus:outline-none font-body"
                   placeholder="Your name"
+                  required
                 />
               </div>
 
@@ -168,6 +199,7 @@ export default function Contact() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 transition-colors border-2 border-gray-200 rounded-lg focus:border-orange-500 focus:outline-none font-body"
                   placeholder="your.email@example.com"
+                  required
                 />
               </div>
 
@@ -183,6 +215,7 @@ export default function Contact() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 transition-colors border-2 border-gray-200 rounded-lg focus:border-orange-500 focus:outline-none font-body"
                   placeholder="How can I help?"
+                  required
                 />
               </div>
 
@@ -198,18 +231,26 @@ export default function Contact() {
                   rows="5"
                   className="w-full px-4 py-3 transition-colors border-2 border-gray-200 rounded-lg resize-none focus:border-orange-500 focus:outline-none font-body"
                   placeholder="Tell me about your project..."
+                  required
                 ></textarea>
               </div>
 
               {/* Submit Button */}
               <button
-                onClick={handleSubmit}
+                type="submit"
+                disabled={loading}
                 className="flex items-center justify-center w-full px-6 py-3 space-x-2 font-semibold text-white transition-colors rounded-lg bg-blue-950 font-heading hover:bg-orange-500"
               >
-                <span>Send Message</span>
-                <FaPaperPlane />
+                {loading ? (
+                  <span>Sending...</span>
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                    <FaPaperPlane />
+                  </>
+                )}
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>

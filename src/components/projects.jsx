@@ -59,15 +59,24 @@ export default function Projects() {
       title: "QR code generator",
       description: "Simple Qr code generator with download feature using javascript.",
       fullDescription: "Simple web-based tool that allows users to generate QR codes instantly. Built with HTML for structure, CSS for styling, and JavaScript for functionality, it takes user input (like text, URLs, or other data) and converts it into a scannable QR code. Additional feature includes the ability to download the generated qr code image.",
-      videoUrl: "/https://youtu.be/dckgzpphbx4",
+      videoUrl: "https://youtu.be/Js0lOuulTvg?si=_SGT4ALfzgsttmzA",
       thumbnail: "/Qr-Code-Gen-thumbnail.png",
       tags: ["HTML","Css","Javascript"]
+    },
+    {
+      id: 6,
+      title: "KeepTrack - Todo List Webapp",
+      description: "Simple Webapp that can store tasks realtime",
+      fullDescription: "Keeptrack is a responsive web application designed to help users monitor and manage tasks or services in real time. Built with a clean, mobile‑friendly interface, it leverages Firebase Realtime Database to ensure instant synchronization across devices.",
+      videoUrl: "https://youtu.be/e3-KsCfMwDg?si=JXXexJ7tvykMX7TK",
+      thumbnail: "/keeptrack-thumbnail.png",
+      tags: ["HTML","Css","Javascript","Firebase"]
     }
   ];
 
   const creativeProjects = [
     {
-      id: 6,
+      id: 7,
       title: "Ad Campaign Design",
       description: "Promotional graphics created for PSI's marketing team, focusing on branding and clarity.",  
       fullDescription: "Add full description here...",
@@ -75,7 +84,7 @@ export default function Projects() {
       tags: ["Graphic Design", "Marketing", "Branding"]
     },
     {
-      id: 7,
+      id: 8,
       title: "Branding & Logo Design",
       description: "Minimalist logos and branding assets designed to give businesses a professional identity.",
       fullDescription: "Add full description here...",
@@ -83,7 +92,7 @@ export default function Projects() {
       tags: ["Logo Design", "Branding", "Identity"]
     },
     {
-      id: 8,
+      id: 9,
       title: "Social Media Graphics",
       description: "Eye-catching posts and banners optimized for engagement and consistency across platforms.",
       fullDescription: "Add full description here...",
@@ -229,15 +238,14 @@ export default function Projects() {
                 <FaTimes className="text-2xl" />
               </button>
             </div>
-            
-            {/* Modal Content */}
+          
             <div className="p-6 space-y-6">
-              {/* Media Display - Video for Technical, Images for Creative */}
-              {selectedProject.id <= 4 ? (
-                // Video for Technical Projects
+             
+              {selectedProject.id ? (
+                
                 <div className="overflow-hidden bg-gray-100 rounded-xl aspect-video">
                   {selectedProject.videoUrl.includes('youtube.com') || selectedProject.videoUrl.includes('youtu.be') ? (
-                    // YouTube Embed
+                    
                     <iframe
                       className="w-full h-full"
                       src={getYouTubeEmbedUrl(selectedProject.videoUrl)}
@@ -247,7 +255,7 @@ export default function Projects() {
                       allowFullScreen
                     ></iframe>
                   ) : (
-                    // Regular Video
+                  
                     <video
                       controls
                       poster={selectedProject.thumbnail}
