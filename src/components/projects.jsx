@@ -80,13 +80,23 @@ export default function Projects() {
       videoUrl: "https://youtu.be/rlZHarPa7-w?si=LFoJWduawJEvQjiE", 
       thumbnail: "/gmail-gsheet-thumbnail.png",
       tags: ["Zapier","Google Sheets","Gmail"]
-    },{
+    },
+    {
       id: "tech-8",
       title: "Service Request Tracker - Google Tools System",
       description: "Collects submissions from Google Forms into Google Sheets, letting employees track and update request statuses easily.",
       fullDescription: "A service request tracker that can record submissions from google form and automatically apply it to google sheets, it allows employees to track concerns while updating each of the requests' status.",
       videoUrl: "https://youtu.be/hj-mLJ05BYk?si=dLF_IXfoytK6Uzc0", 
       thumbnail: "/service-tracker-gtools-thumbnail.png",
+      tags: ["Zapier","Google Sheets","Gmail"]
+    },
+    {
+      id: "tech-9",
+      title: " Moon jumper - pygame ",
+      description: "A side‑scrolling arcade game built with Pygame, where players dodge animated obstacles, jump with double‑jump mechanics, and survive as long as possible while tracking their score.",
+      fullDescription: "Moon Jumper is a custom arcade platformer developed in Python using Pygame. The game features a responsive player character with smooth animations, gravity physics, and double‑jump capability. Players navigate a lunar landscape while avoiding land and sky roamers.",
+      videoUrl: "https://youtu.be/3-SsCak_xvM?si=t7dfRsIuQvUtBfLk", 
+      thumbnail: "/moon-jumper-thumbnail.png",
       tags: ["Zapier","Google Sheets","Gmail"]
     }
    
