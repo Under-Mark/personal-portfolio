@@ -29,9 +29,9 @@ export default function NavBar() {
         </ul>
         
         {/* CTA Button (Desktop only) */}
-        <button className="items-center hidden px-4 py-2 space-x-2 font-semibold transition bg-orange-500 rounded-full cursor-pointer md:flex font-heading hover:bg-orange-600">
-          <FaBriefcase /> <span>Hire Me</span>
-        </button>
+        <a className="items-center hidden px-4 py-2 space-x-2 font-semibold transition bg-orange-500 rounded-full cursor-pointer md:flex font-heading hover:bg-orange-600" href="#contact">
+          <FaBriefcase /> <span>Contact Me</span>
+        </a>
         
         {/* Mobile Hamburger */}
         <button
@@ -62,9 +62,9 @@ export default function NavBar() {
               <li><a href="#accomplishments" className="flex items-center px-2 py-2 space-x-2 transition rounded hover:text-orange-500 hover:bg-blue-900"><FaAward /> <span>Accomplishments</span></a></li>
               <li><a href="#contact" className="flex items-center px-2 py-2 space-x-2 transition rounded hover:text-orange-500 hover:bg-blue-900"><FaEnvelope /> <span>Contact</span></a></li>
               <li className="pt-2 border-t border-blue-800">
-                <button className="flex items-center justify-center w-full px-4 py-2 space-x-2 font-semibold transition bg-orange-500 rounded-full cursor-pointer font-heading hover:bg-orange-600">
+                <a className="flex items-center justify-center w-full px-4 py-2 space-x-2 font-semibold transition bg-orange-500 rounded-full cursor-pointer font-heading hover:bg-orange-600" href="#contact">
                   <FaBriefcase /> <span>Contact Me</span>
-                </button>
+                </a>
               </li>
             </ul>
           </div>

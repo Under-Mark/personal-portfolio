@@ -19,16 +19,16 @@ export default function Projects() {
 
   const technicalProjects = [
     {
-      id: 1,
+      id: "tech-1",
       title: "Liliryo Pos System",
       description: "A custom-built POS system for a website that sells crochet crafts.",
       fullDescription: "Liliyo is a point‑of‑sale and inventory management system I developed specifically for my girlfriend's crochet business. The platform was designed to handle the unique needs of selling handmade creative works and crafts, offering a clean interface for product listings, order tracking, and customer management.",
-      videoUrl: "your-video-url.mp4",
-      thumbnail: "/liliryo-thumbnail.jpg",
+      videoUrl: "https://youtu.be/70-WDoZFsY0?si=TUYpvalORiE5lv4M",
+      thumbnail: "/liliryo-thumbnail.png",
       tags: ["HTML", "CSS", "Javascript", "Tailwind Css"]
     },
     {
-      id: 2,
+      id: "tech-2",
       title: "WorkIt - AI-Powered Workout Generator",
       description: "A platform where users can generate personalized workout by answering a simple form.",
       fullDescription: "WorkIt is a React-based web application that helps users create customized workout routines tailored to their fitness preferences. By filling out a simple form, users can specify their fitness level, available equipment, workout duration, and target muscle groups. The app then automatically generates a structured workout plan that matches their input, making fitness planning more accessible and efficient.",
@@ -37,7 +37,7 @@ export default function Projects() {
       tags: ["React", "Tailwind Css", "HF API"]
     },
     {
-      id: 3,
+      id: "tech-3",
       title: "Kitchen Buddy — AI‑Powered Recipe Assistant",
       description: "Kitchen Buddy reduces the stress of meal planning, encourages experimentation in the kitchen, and helps minimize food waste by suggesting recipes based on what's already on hand.",
       fullDescription: "Kitchen Buddy is a smart cooking assistant that transforms free‑text ingredient input into structured recipes and meal suggestions. Built with natural language processing, it helps users make the most of what they already have in their pantry by generating clear, step‑by‑step cooking instructions.",
@@ -46,7 +46,7 @@ export default function Projects() {
       tags: ["React", "Tailwind CSS", "Web Design", "Llama Api"]
     },
     {
-      id: 4,
+      id: "tech-4",
       title: "Hotel Booking Tracker",
       description: "Excel Based Tracker used to track guest bookings while acting as a sales tracker while providing descriptive monthly summary.",
       fullDescription: "Hotel Booking Tracker is a streamlined sales and booking management system designed to help hospitality businesses monitor reservations, calculate revenues, and maintain accurate records of guest stays. Built in MS Excel, it combines structured data entry with automated formulas to reduce errors and improve efficiency.",
@@ -55,7 +55,7 @@ export default function Projects() {
       tags: ["Microsoft Excel",]
     },
     {
-      id: 5,
+      id: "tech-5",
       title: "QR code generator",
       description: "Simple Qr code generator with download feature using javascript.",
       fullDescription: "Simple web-based tool that allows users to generate QR codes instantly. Built with HTML for structure, CSS for styling, and JavaScript for functionality, it takes user input (like text, URLs, or other data) and converts it into a scannable QR code. Additional feature includes the ability to download the generated qr code image.",
@@ -64,19 +64,37 @@ export default function Projects() {
       tags: ["HTML","Css","Javascript"]
     },
     {
-      id: 6,
+      id: "tech-6",
       title: "KeepTrack - Todo List Webapp",
       description: "Simple Webapp that can store tasks realtime",
       fullDescription: "Keeptrack is a responsive web application designed to help users monitor and manage tasks or services in real time. Built with a clean, mobile‑friendly interface, it leverages Firebase Realtime Database to ensure instant synchronization across devices.",
-      videoUrl: "https://youtu.be/e3-KsCfMwDg?si=JXXexJ7tvykMX7TK",
+      videoUrl: " https://youtu.be/e3-KsCfMwDg?si=JXXexJ7tvykMX7TK",
       thumbnail: "/keeptrack-thumbnail.png",
       tags: ["HTML","Css","Javascript","Firebase"]
+    },
+    {
+      id: "tech-7",
+      title: "Starred email to Googlesheet log - Automation workflow",
+      description: "A simple automation that takes starred emails from Gmail, uses AI to classify them, and logs the details into Google Sheets.",
+      fullDescription: "  This automation streamlines productivity by connecting Gmail, AI classification, and Google Sheets into a single workflow. Starred emails are automatically processed by AI, which classifies their content (e.g., task, client request, follow‑up) and extracts structured details. The results are then logged into a Google Sheet, creating a live task tracker without manual input.",
+      videoUrl: "https://youtu.be/rlZHarPa7-w?si=LFoJWduawJEvQjiE", 
+      thumbnail: "/gmail-gsheet-thumbnail.png",
+      tags: ["Zapier","Google Sheets","Gmail"]
+    },{
+      id: "tech-8",
+      title: "Service Request Tracker - Google Tools System",
+      description: "Collects submissions from Google Forms into Google Sheets, letting employees track and update request statuses easily.",
+      fullDescription: "A service request tracker that can record submissions from google form and automatically apply it to google sheets, it allows employees to track concerns while updating each of the requests' status.",
+      videoUrl: "https://youtu.be/hj-mLJ05BYk?si=dLF_IXfoytK6Uzc0", 
+      thumbnail: "/service-tracker-gtools-thumbnail.png",
+      tags: ["Zapier","Google Sheets","Gmail"]
     }
+   
   ];
 
   const creativeProjects = [
     {
-      id: 7,
+      id: "create-1",
       title: "Ad Campaign Design",
       description: "Promotional graphics created for PSI's marketing team, focusing on branding and clarity.",  
       fullDescription: "Add full description here...",
@@ -84,7 +102,7 @@ export default function Projects() {
       tags: ["Graphic Design", "Marketing", "Branding"]
     },
     {
-      id: 8,
+      id: "create-2",
       title: "Branding & Logo Design",
       description: "Minimalist logos and branding assets designed to give businesses a professional identity.",
       fullDescription: "Add full description here...",
@@ -92,7 +110,7 @@ export default function Projects() {
       tags: ["Logo Design", "Branding", "Identity"]
     },
     {
-      id: 9,
+      id: "create-3",
       title: "Social Media Graphics",
       description: "Eye-catching posts and banners optimized for engagement and consistency across platforms.",
       fullDescription: "Add full description here...",

@@ -11,3 +11,6 @@
 .animate-fadeInUp {
   animation: fadeInUp 0.8s ease-out forwards;
 }
+html {
+  scroll-behavior: smooth;
+}
